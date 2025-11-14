@@ -1,0 +1,77 @@
+.home-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+}
+
+.home-header {
+  text-align: center;
+  padding: 60px 20px 40px;
+  color: white;
+}
+
+.home-header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.home-header p {
+  font-size: 1.2rem;
+  opacity: 0.95;
+}
+
+.profile-selection {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+}
+
+.profile-card {
+  background: white;
+  border-radius: 20px;
+  padding: 50px 40px;
+  width: 350px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.profile-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.profile-icon {
+  font-size: 80px;
+  margin-bottom: 20px;
+}
+
+.profile-card h2 {
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+
+.profile-card p {
+  color: var(--text-light);
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.profile-card button {
+  width: 100%;
+}
+
+.home-footer {
+  text-align: center;
+  padding: 20px;
+  color: white;
+  opacity: 0.9;
+}
