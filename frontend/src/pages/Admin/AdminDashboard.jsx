@@ -319,6 +319,27 @@ function AdminDashboard() {
                 <textarea value={solicitacaoSelecionada.descricao_problema} disabled rows="3" />
               </div>
 
+              {solicitacaoSelecionada.path_imagem && (
+                <div className="form-group">
+                  <label>Imagem anexada</label>
+                  <div style={{ marginTop: '5px' }}>
+                    <img 
+                      src={`http://localhost:3001${solicitacaoSelecionada.path_imagem}`}
+                      alt="Imagem da solicitação"
+                      style={{ 
+                        maxWidth: '100%', 
+                        height: 'auto', 
+                        maxHeight: '200px',
+                        borderRadius: '8px',
+                        border: '1px solid var(--border-color)',
+                        cursor: 'pointer'
+                      }}
+                      onClick={() => window.open(`http://localhost:3001${solicitacaoSelecionada.path_imagem}`, '_blank')}
+                    />
+                  </div>
+                </div>
+              )}
+
               <div className="form-group">
                 <label>Status</label>
                 <select

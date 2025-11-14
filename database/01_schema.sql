@@ -74,4 +74,4 @@ CREATE TABLE IF NOT EXISTS movimentacoes (
   INDEX idx_movimentacao_data (data_movimentacao)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Fim do script de criação
+

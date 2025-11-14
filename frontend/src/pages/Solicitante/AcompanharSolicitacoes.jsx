@@ -101,6 +101,26 @@ function AcompanharSolicitacoes() {
                   </div>
                   <p><strong>Local:</strong> {sol.local_problema}</p>
                   <p><strong>Descrição:</strong> {sol.descricao_problema}</p>
+                  {sol.path_imagem && (
+                    <div style={{ marginTop: '10px' }}>
+                      <strong>Imagem anexada:</strong>
+                      <div style={{ marginTop: '5px' }}>
+                        <img 
+                          src={`http://localhost:3001${sol.path_imagem}`}
+                          alt="Imagem da solicitação"
+                          style={{ 
+                            maxWidth: '100%', 
+                            height: 'auto', 
+                            maxHeight: '200px',
+                            borderRadius: '8px',
+                            border: '1px solid var(--border-color)',
+                            cursor: 'pointer'
+                          }}
+                          onClick={() => window.open(`http://localhost:3001${sol.path_imagem}`, '_blank')}
+                        />
+                      </div>
+                    </div>
+                  )}
                   {sol.resposta_setor && (
                     <div style={{ marginTop: '10px', padding: '10px', backgroundColor: '#e8f4f8', borderRadius: '8px' }}>
                       <strong>Resposta:</strong> {sol.resposta_setor}
